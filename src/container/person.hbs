@@ -1,0 +1,59 @@
+
+    <h1>{{person.name}}</h1>
+    Age: {{person.age}} Gender: {{person.gender}}
+    <p>Address: {{person.address.street}}, {{person.address.city}}, {{person.address.state}} {{person.address.zip}}, {{person.address.country}}</p>
+    <h3>Education</h3>
+    {{#each person.education}}
+      <p>{{degree}} in {{major}} from {{university}} ({{graduationYear}})</p>
+    {{/each}}
+    <h3>Work Experience</h3>
+    {{#each person.workExperience}}
+      <h3>{{company}} ({{startDate}} - {{endDate}})</h3>
+      <p>{{title}}</p>
+      <ul>
+        {{#each responsibilities}}
+          <li>{{this}}</li>
+        {{/each}}
+      </ul>
+      {{#each employees}}
+        <h4>{{name}} ({{position}})</h4>
+        {{#each projects}}
+          <h5>{{name}}:{{description}}</h5> 
+          
+          Status:{{status}}
+<ul>
+  {{#each teams}}
+  <p>Teams:  <b>{{team_name}}</b></P>
+  <li>
+    
+    {{#with team_leader}}
+    Team Leader: {{name}}, Position:{{title}}, Email:{{email}}
+    {{/with}}
+    <br>
+    <b>Team members:</b>
+    <ul>
+      {{#each team_members}}
+      <li>
+        {{name}}, Position:{{title}}, email:{{email}}
+        <br>
+        <em>Skills:</em>
+        <ul>
+          {{#each skills}} <li>{{this}}</li>
+          {{/each}}
+          {{#each projects}}
+          <p>Projects: {{name}},({{description}})<p/>
+           <p>Technologies:{{technologies}}</p>
+         {{/each}}
+    
+      </li>
+    </ul>
+  </li>
+</ul>
+        
+{{/each}}
+        {{/each}}
+          {{/each}}        
+      {{/each}}
+    {{/each}}
+  </body>
+</html>
