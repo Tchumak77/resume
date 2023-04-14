@@ -7,7 +7,7 @@
             <br>
             <div>
                 {{#with excursion}}
-                <div>Name: <b>{{name}} </b></div>
+                Name: <b>{{name}} </b>
                 <br>
                 <div>
                     Location:
@@ -22,39 +22,36 @@
                     <ul>
                         {{#each program}}
                         <li>
-                            <div>Name: {{name}}</div>
-                            <div>Type: {{type}}</div>
-                            <div>Duration: {{duration}}</div>
-                            <br>
-                            <div>
-                                {{#with details}}
-                                Details:
-                                
-                                    {{#if museum}}
-                                    {{#with museum}}
-                                    Museum: {{name}}
+                         <div>Name: {{name}}</div>
+                         <div>Type: {{type}}</div>
+                         <div>Duration: {{duration}}</div>
+                         
+                         <div>
+                             {{#with details}}
+                              Details:
+                                {{#if museum}}
+                                 {{#with museum}}
+                               Museum: {{name}}
 
-                                    <div>
-                                        {{#with location}}
-                                        <div>Location: {{address}}, {{city}}, {{country}}</div>
+                            <div>
+                                {{#with location}}
+                                <div>Location: {{address}}, {{city}}, {{country}}</div>
                                         
-                                        {{/with}}
-                                    </div>
-                                    <br>
-                                    <div>
-                                        <h4><em>Exhibits:</em></h4>
-                                            <ul>
-                                                {{#each exhibits}}
-                                                <li>
-                                                    <div>Name: {{name}}</div>
-                                                    <div>
-                                                        {{#if artist includeZero=null }}
-                                                        <div>Artist:
-                                                            {{artist}}</div>
-                                                        {{else}}
-                                                        <div>Artist:
-                                                            No Artist</div>
-                                                        {{/if}}
+                                 {{/with}}
+                            </div>
+                            <br>
+                             <div>
+                                 <h4><em>Exhibits:</em></h4>
+                                   <ul>
+                                      {{#each exhibits}}
+                                        <li>
+                                        <div>Name: {{name}}</div>
+                                            <div>
+                                                {{#if artist includeZero=null }}
+                                                  <div>Artist: {{artist}}</div>
+                                                  {{else}}
+                                                  <div>Artist: No Artist</div>
+                                                  {{/if}}
 
                                                     </div>
                                                     <div>Description: {{description}}</div>
@@ -77,12 +74,9 @@
                                     <div>
                                         {{#with venue}}
                                         <div>Name:{{name}}</div>
-                                        
                                         {{#with location}}
                                         Location: {{address}}, {{city}}, {{country}}
-                                            
                                         {{/with}}
-                                        
                                         {{/with}}
                                     </div>
                                     <div>
