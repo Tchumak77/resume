@@ -3,10 +3,10 @@
           
           <h1>{{name}}</h1>
 
- <h4> {{birthdate}}  -   {{deathdate}}</h4>
-Birthplace:{{birthplace}}
-<p>Deathplace:{{deathplace}}</p>
-Nationality:{{nationality}}
+  <h4> {{birthdate}}  -   {{deathdate}}</h4>
+Birthplace: {{birthplace}}
+<p>Deathplace: {{deathplace}}</p>
+Nationality: {{nationality}}
 <p><h4> Occupation: {{occupation}} </h4></p> 
 <h4>Known for: </h4>{{#each known_for}}       
   <ul>
@@ -14,10 +14,10 @@ Nationality:{{nationality}}
   </ul>  
   {{/each}}      
 <p><h4>Education:</h4></p>
-{{#each education}}
-Field of study:{{field}} * Degree: {{degree}}
-<div>{{institution}} in {{year}}</div>
-{{/each}}
+    {{#each education}}
+       Field of study:{{field}} * Degree: {{degree}}
+    <div>{{institution}} in {{year}}</div>
+    {{/each}}
 <br>
 <h4>Notable Publications:</h4> 
 <div>
@@ -32,25 +32,25 @@ Field of study:{{field}} * Degree: {{degree}}
     </ul>
  </div>
   <h4>Partners:</h4>
-  <ul>
-  {{#each partners}}  
-  <li>
-    Name:<b>{{name}}</b>
-    relationship:{{relationship}}
-    years:<b>{{years}}</b>
-    {{/each}}
-  </li>
-  </ul>        
+      <ul>
+       {{#each partners}}  
+      <li>
+        Name:<b>{{name}}</b>
+        relationship:{{relationship}}
+        years:<b>{{years}}</b>
+       {{/each}}
+      </li>
+       </ul>        
  <h4> Awards:</h4>
- <ul>
-  {{#each awards}}
+    <ul>
+    {{#each awards}}
   <li>
- {{title}}
+    {{title}}
  ({{year}})
  <em>Description:</em>{{description}}
- {{/each}}
- </li>
- </ul>
+     {{/each}}
+  </li>
+    </ul>
  <p><h4>Influences:</h4></p>
   <ul>
     {{#each influences}}
