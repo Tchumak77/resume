@@ -27,11 +27,11 @@
                          <div>Duration: {{duration}}</div>
                          
                          <div>
-                             {{#with details}}
-                              Details:
-                                {{#if museum}}
-                                 {{#with museum}}
-                               Museum: {{name}}
+                           {{#with details}}
+                            Details:
+                            {{#if museum}}
+                            {{#with museum}}
+                            Museum: {{name}}
 
                             <div>
                                 {{#with location}}
@@ -41,11 +41,11 @@
                             </div>
                             <br>
                              <div>
-                                 <h4><em>Exhibits:</em></h4>
-                                   <ul>
-                                      {{#each exhibits}}
-                                        <li>
-                                        <div>Name: {{name}}</div>
+                             <h4><em>Exhibits:</em></h4>
+                             <ul>
+                                {{#each exhibits}}
+                                   <li>
+                                      <div>Name: {{name}}</div>
                                             <div>
                                                 {{#if artist includeZero=null }}
                                                   <div>Artist: {{artist}}</div>
@@ -53,7 +53,7 @@
                                                   <div>Artist: No Artist</div>
                                                   {{/if}}
 
-                                                    </div>
+                                            </div>
                                                     <div>Description: {{description}}</div>
                                                     <div>
                                                         {{#if audio_guide includeZero=true}}
