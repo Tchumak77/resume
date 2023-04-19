@@ -1,0 +1,89 @@
+    <main>
+    <hr>
+    <section>
+    {{> title data=name big=true}}
+    <div>
+        <ul>
+            {{#each users}}
+                <li>{{id}},<b>{{name}}</b>, {{gender}}, {{age}} years
+                <br>
+                <p>Friends:</p>
+                <ul>
+                    {{#each friends}}
+                        <li>
+                            {{id}}, <b>{{name}}</b>, {{gender}}, {{age}} years
+                            <div>
+                                {{#if groups}}
+                                Groups:
+                                <ul>
+                                    {{#each groups}}
+                                    <li>
+                                        {{id}}, <b>{{name}}</b>
+                                        <div>{{description}}</div>
+                                        <div>
+                                            Members:
+                                            <ul>
+                                            {{#each members}}
+                                            <li>{{id}}, <b>{{name}}</b>, {{gender}}, {{age}} years</li>
+                                            {{/each}}
+                                            </ul>
+                                        </div>
+                                    </li>
+                                    {{/each}}
+                                </ul>
+                                {{/if}}
+                            </div>
+                            <div>
+                                <em>Mutual friends:</em>
+                                <ul>
+                                    {{#each mutual_friends}}
+                                    <li>{{id}}, <b>{{name}}</b>, {{gender}}, {{age}} years
+                                    <div>
+                                    {{#if mutual_friends}}
+                                    <em>Mutual friends:</em>
+                                        <ul>
+                                        {{#each mutual_friends}}
+                                        <li>{{id}}, <b>{{name}}</b>, {{gender}}, {{age}} years</li>
+                                        {{/each}}
+                                        </ul>
+                                    {{/if}}
+                                    </div>
+
+                                            </li>
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+
+                                    <br>
+                        </li>
+                {{/each}}
+                </ul>
+                        <div>
+                            {{#if groups}}
+                            Groups:
+                            <ul>
+                                {{#each groups}}
+                                <li>
+                                    {{id}}  <b>{{name}}</b>
+                                    <p> {{description}}</p>
+                                    <div>
+                                        Members:
+                                        <ul>
+                                            {{#each members}}
+                                            <li>{{id}}, <b> {{name}}</b>, {{gender}}, {{age}} years </li>
+                                            {{/each}}
+                                        </ul>
+                                    </div>
+                                </li>
+                                {{/each}}
+                            </ul>
+                            {{/if}}
+                        </div>
+                    </li>
+            {{/each}}
+        </ul>
+    </div>
+    </section>
+    <hr>
+    </main>
+
