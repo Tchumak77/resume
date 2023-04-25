@@ -5,8 +5,8 @@
       <div class="card">
         {{#with main}} 
          <div class="card-body">
-          <h1 class="text-center">{{title}}</h1>
-          <div class="text-center">{{text}}</div>
+          <h1 class="text">{{title}}</h1>
+          <div class="text">{{text}}</div>
           <br>
           <button class="btn btn-primary" > {{button_text.solid}} </button>
           <br>
@@ -82,13 +82,13 @@
 <br>
 {{#with paragraph}}
 <div class="card">
- <div class="card-body">
-<h5 class="text-center">{{title}}</h5>
+    <div class="card-body">
+       <h5 class="text-uppercase">{{title}}</h5>
 
-       <h6>  <div class="text-center">{{text}}</div></h6>
+       <h6>  <div class="text-lowercase">{{text}}</div></h6>
        {{#with button}}
        <a href='https://google.com' class="btn btn-link"> {{text}} </a> 
- </div> 
+     
 <br>
 
 <br>
@@ -110,7 +110,7 @@
 
     </div>
 </div> 
-
+</div> 
 {{/with}}
 </div> 
 </div>
