@@ -3,19 +3,18 @@
        <div class="row">
        {{#each links}}
             <div class="col-2">
-                <a href="{{href}}" target="_blank">{{text}}</a>
+             <a href="{{href}}" target="_blank">{{text}}</a>
             </div>
         {{/each}}
         {{#with button}}
             <div class="col-6">
-               <a href="{{href}}" class="btn btn-primary">{{text}}</a> 
+             <a href="{{href}}" class="btn btn-primary">{{text}}</a> 
             </div>    
         {{/with}}           
     {{/with}}
      <br>
      <br>
     <hr>
-
     {{#with header}}
     <h1>{{title}}</h1>
     <p>{{description}}</p>
@@ -43,7 +42,6 @@
             <p><a href="{{button.href}}" class="btn btn-primary">{{button.text}}</a></p>
             </div>
            </div> 
-
       {{/each}} 
     
     {{/with}}
@@ -77,7 +75,7 @@
        {{/with}}
     {{/with}}
 <br>
-
+<br>
 <hr>
 {{#with gallery}}
   <h2>{{title}}</h2>
@@ -114,6 +112,7 @@
    </div>
    </div>
    </div>
+    <br>
     <br>
   {{/each}}
 {{/with}}
